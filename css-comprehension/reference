@@ -1,0 +1,69 @@
+https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682
+
+github.com 873
+mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension-finished/style.css
+/* General styles */
+
+body {
+  margin: 0;
+}
+
+html {
+  font-family: 'Helvetica neue', Arial, 'sans serif';
+  font-size: 10px;
+  background-color: #ccc;
+}
+
+/* card setup */
+
+.card {
+  width: 35em;
+  height: 22em;
+  margin: 5em auto;
+  background-color: red;
+  border: 0.2em solid black;
+This file has been truncated. show original
+As you’ll see, in this example the global font-size has been set to 10px in the second rule:
+
+.html {
+font-family: ‘Helvetica neue’, Arial, ‘sans serif’;
+font-size: 10px;
+background-color: #ccc;
+}
+
+This means that 1em is 10px, for descendants of <html>, unless a different font-size has been set anywhere in the hierarchy, which in this case it isn’t until we get to the <h2> inside the <header> and the <p> inside the <footer> (see below).
+
+The next significant rule we have is this:
+
+.card header, .card footer {
+height: 3em;
+padding: 1em;
+}
+
+Here we are setting the height of the <header> and <footer> to 3em, which as hinted above, will compute to 30px in real terms (3 x 10 = 30)
+
+So the height of these blocks is 30px — this is what we need to center our text in.
+
+The slightly (but not very) tricky bit comes in these rules:
+
+.card header h2 {
+font-size: 2em;
+line-height: 1.5;
+}
+ 
+.card footer p {
+font-size: 1.5em;
+line-height: 2;
+}
+
+Here we have set the font-size of the <h2> to 2em, which computes to 20px, and the font-size of the <p> to 1.5em, which computes to 15px.
+
+We need to set the line-height to 30px so the text will sit in the center of the containing block’s height, in each case.
+
+For the <h2>, we set line-height as 1.5 — 2 x 1.5 = 30.
+
+For the <p>, we set line-height as 2 — 1.5 x 2 = 30.
+
+We are using unitless line-height values, which calculate the line-height relative to the font-size set on the element, as it is often useful to set everything relative to the font-size. To simplify it further, you could just use an absolute line-height value of 30px for both.
+
+Hope this helps, and best regards.
