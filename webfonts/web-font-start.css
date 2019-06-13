@@ -1,0 +1,46 @@
+/* General setup */
+@font-face {
+    font-family: 'josefin_sanslight';
+    src: url('josefinsans-light-webfont.woff2') format('woff2'),
+        url('josefinsans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aller_lightregular';
+    src: url('aller_lt-webfont.woff2') format('woff2'),
+        url('aller_lt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    font-size: 10px;
+    margin: 0;
+    font-family: 'josefin_sanslight',sans-serif;
+}
+
+body {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    word-spacing: 0.6rem;
+}
