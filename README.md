@@ -1,2 +1,2 @@
 ## MDN Learning
-All the topics I have been learning
+Great website to get introduced to web development
